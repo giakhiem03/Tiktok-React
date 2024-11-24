@@ -19,7 +19,7 @@ import {
     faUser,
 } 
 from '@fortawesome/free-solid-svg-icons';
-import routesConfig from '~/config/routes'
+import config from '~/config'
 import Tippy from '@tippyjs/react';
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
@@ -53,7 +53,7 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng việt',
-                },
+                }
             ],
         },
     },
@@ -70,9 +70,6 @@ const MENU_ITEMS = [
 
 function Header() {
     const currentUser = true;
-
-
-    
 
     //handle logic
     const handleMenuChange = (menuItem) => {
@@ -112,7 +109,7 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <Link to={routesConfig.home} className={cx('logo-link')}>
+                <Link to={config.routes.home} className={cx('logo-link')}>
                     <img src={images.logo} alt="Tiktok" />
                 </Link>
 
@@ -137,9 +134,9 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="https://thth/id/OIP.JADOFqAn"
-                                alt="image "
-                                fallback = "https://i.ytimg.com/an/NSCWwgW-rwmoE3Yc4WmJhw/featured_channel.jpg?v=63a984d2"
+                                src="https://i.ytimg.com/an/NSCWwgW-rwmoE3Yc4WmJhw/featured_channel.jpg?v=63a984d2"
+                                alt="image"
+                                fallback = "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/e162ccf43b2f13fd3cbd46be2552ef21.jpeg?lk3s=a5d48078&nonce=15695&refresh_token=09172abed12bced3374be80470f26c70&x-expires=1731081600&x-signature=mlQfRUudi%2B7%2FlvqRL0d1M8x0rdo%3D&shp=a5d48078&shcp=b59d6b55"
                             ></Image>
                         ) : (
                             <button className={cx('more-btn')}>
