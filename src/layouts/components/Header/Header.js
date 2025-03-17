@@ -1,5 +1,5 @@
-import PropTypes from 'prop-types';
-import { Fragment } from 'react';
+// import PropTypes from 'prop-types';
+// import { Fragment } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCoins,
@@ -7,20 +7,19 @@ import {
     faEllipsisVertical,
     faGear,
     faKeyboard,
-    faMagicWandSparkles,
-    faMagnifyingGlass,
-    faMartiniGlass,
-    faMessage,
-    faQuestion,
+    // faMagicWandSparkles,
+    // faMagnifyingGlass,
+    // faMartiniGlass,
+    // faMessage,
+    // faQuestion,
     faQuestionCircle,
-    faSignIn,
+    // faSignIn,
     faSignOut,
-    faSliders,
-    faUpload,
+    // faSliders,
+    // faUpload,
     faUser,
-} 
-from '@fortawesome/free-solid-svg-icons';
-import config from '~/config'
+} from '@fortawesome/free-solid-svg-icons';
+import config from '~/config';
 import Tippy from '@tippyjs/react';
 import { Link } from 'react-router-dom';
 import Button from '~/components/Button';
@@ -34,7 +33,6 @@ import { type } from '@testing-library/user-event/dist/type';
 import { UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
-
 
 const cx = classNames.bind(styles);
 
@@ -54,7 +52,7 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'vi',
                     title: 'Tiếng việt',
-                }
+                },
             ],
         },
     },
@@ -115,7 +113,7 @@ function Header() {
                 </Link>
 
                 <Search></Search>
-                
+
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
@@ -137,7 +135,7 @@ function Header() {
                                 className={cx('user-avatar')}
                                 src="https://i.ytimg.com/an/NSCWwgW-rwmoE3Yc4WmJhw/featured_channel.jpg?v=63a984d2"
                                 alt="image"
-                                fallback = "https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/e162ccf43b2f13fd3cbd46be2552ef21.jpeg?lk3s=a5d48078&nonce=15695&refresh_token=09172abed12bced3374be80470f26c70&x-expires=1731081600&x-signature=mlQfRUudi%2B7%2FlvqRL0d1M8x0rdo%3D&shp=a5d48078&shcp=b59d6b55"
+                                fallback="https://p16-sign-sg.tiktokcdn.com/aweme/100x100/tos-alisg-avt-0068/e162ccf43b2f13fd3cbd46be2552ef21.jpeg?lk3s=a5d48078&nonce=15695&refresh_token=09172abed12bced3374be80470f26c70&x-expires=1731081600&x-signature=mlQfRUudi%2B7%2FlvqRL0d1M8x0rdo%3D&shp=a5d48078&shcp=b59d6b55"
                             ></Image>
                         ) : (
                             <button className={cx('more-btn')}>

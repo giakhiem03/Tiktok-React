@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { faCircleXmark, faL, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { SearchIcon } from '~/components/Icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -50,16 +50,15 @@ function Search() {
     };
 
     const handleChange = (e) => {
-        if (e.target.value[0] === " ") {
+        if (e.target.value[0] === ' ') {
             e.target.value = e.target.value.trim();
         }
         setSearchValue(e.target.value);
     };
 
-    
     return (
-        // Using a wrapper <div> tag around the reference element solves 
-        // this by creating a new parentNode context. 
+        // Using a wrapper <div> tag around the reference element solves
+        // this by creating a new parentNode context.
         <div>
             <HeadlessTippy
                 interactive
@@ -91,10 +90,10 @@ function Search() {
                             <FontAwesomeIcon icon={faCircleXmark} />
                         </button>
                     )}
-    
+
                     {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-    
-                    <button className={cx('search-btn')} onMouseDown={e => e.preventDefault()}>
+
+                    <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()}>
                         <SearchIcon></SearchIcon>
                     </button>
                 </div>
