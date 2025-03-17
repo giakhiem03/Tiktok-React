@@ -19,19 +19,19 @@ import {
     // faUpload,
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
-import config from '~/config';
+import config from '../../../config';
 import Tippy from '@tippyjs/react';
 import { Link } from 'react-router-dom';
-import Button from '~/components/Button';
+import Button from '../../..//components/Button';
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
-import images from '~/assets/images';
-import Menu from '~/components/Popper/Menu';
+import images from '../../..//assets/images';
+import Menu from '../../..//components/Popper/Menu';
 import 'tippy.js/dist/tippy.css';
 // import { keyboard } from '@testing-library/user-event/dist/keyboard';
 // import { type } from '@testing-library/user-event/dist/type';
-import { UploadIcon } from '~/components/Icons';
-import Image from '~/components/Image';
+import { UploadIcon } from '../../..//components/Icons';
+import Image from '../../..//components/Image';
 import Search from '../Search';
 
 const cx = classNames.bind(styles);
